@@ -1,0 +1,49 @@
+{
+	"partitions" : [
+		{
+			"name" : "Top",
+			"pins" : [
+				{
+					"name" : "o_CLR_CONT",
+					"strict" : false
+				},
+				{
+					"name" : "o_READY",
+					"strict" : false
+				},
+				{
+					"name" : "o_INC_CONT",
+					"strict" : false
+				},
+				{
+					"name" : "o_R_EN_ROM",
+					"strict" : false
+				},
+				{
+					"name" : "o_WR_EN_RAM",
+					"strict" : false
+				},
+				{
+					"name" : "i_CONTINUE",
+					"strict" : false
+				},
+				{
+					"name" : "i_GO",
+					"strict" : false
+				},
+				{
+					"name" : "i_CLK",
+					"strict" : false
+				},
+				{
+					"name" : "i_CLR_n",
+					"strict" : false
+				},
+				{
+					"name" : "i_NEXT",
+					"strict" : false
+				}
+			]
+		}
+	]
+}
