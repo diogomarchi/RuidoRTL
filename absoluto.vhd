@@ -13,8 +13,8 @@ use ieee.numeric_std.all;
 
 ENTITY absoluto IS
   PORT (
-    i_A    : IN  STD_LOGIC_VECTOR(8 DOWNTO 0);-- data input		 
-    o_SAIDA : OUT STD_LOGIC_VECTOR(8 DOWNTO 0) -- data output
+    i_A    : IN  STD_LOGIC_VECTOR(7 DOWNTO 0);-- data input		 
+    o_SAIDA : OUT STD_LOGIC_VECTOR(7 DOWNTO 0) -- data output
   );
 END absoluto;
 

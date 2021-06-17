@@ -20,8 +20,14 @@ END somador;
 
 ARCHITECTURE arch_1 OF somador IS
 
+signal w_A, w_B : STD_LOGIC_VECTOR(8 DOWNTO 0) := "000000000";
+
 BEGIN
+
+  w_A(7 downto 0) <= i_A;
+  w_B(7 downto 0) <= i_B;
+
   -- SAIDA
-  o_Q <= i_A + i_B;
+  o_Q <= w_A + w_B;
 
 END arch_1;

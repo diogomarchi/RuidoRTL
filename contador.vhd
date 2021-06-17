@@ -27,7 +27,7 @@ BEGIN
   PROCESS (i_CLR, i_CLK)
   BEGIN
     IF (i_CLR = '1') THEN
-      w_COUNTER <= "000000000000000000000";
+      w_COUNTER <= "00000000000000000000";
     ELSIF (rising_edge(i_CLK)) THEN
       IF (i_ENA = '1') THEN
         w_COUNTER <= w_COUNTER + "1";
