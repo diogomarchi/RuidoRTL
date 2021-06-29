@@ -1,0 +1,80 @@
+------------------------------------------------
+-- Design: top_entity_tb
+-- Entity: top_entity_tb
+-- Author: Diogo & George
+-- Rev. : 1.0
+-- Date : 06/16/2021
+------------------------------------------------
+
+library ieee;
+use ieee.std_logic_1164.all;
+use ieee.STD_LOGIC_UNSIGNED.all;
+
+entity top_entity_tb is
+end top_entity_tb;
+
+architecture rtl of top_entity_tb is
+
+  component top_entity is
+    port (
+      i_CLK           : in  std_logic;
+      i_CLR_n         : in  std_logic;
+      i_GO            : in  std_logic;                    -- enable contador
+      i_CONTINUE      : in  std_logic;                    -- clear contador
+      i_LIMIAR1       : in  std_logic_vector(7 downto 0); -- LIMIAR 1 ruido sal
+      i_LIMIAR2       : in  std_logic_vector(7 downto 0); -- LIMIAR 2 ruido sal
+      i_SELECAO_RUIDO : in  std_logic;                    -- seleciona entre os tipos de ruido
+      o_READY         : out std_logic                     -- addr sal noise
+    );
+  end component;
+
+  signal w_CLK, w_CLR_n, w_GO, w_READY, w_CONTINUE, w_SELECAO_RUIDO : std_logic;
+  signal w_LIMIAR1, w_LIMIAR2                                       : std_logic_vector(7 downto 0);
+  constant c_CLK_period                                             : time := 2 ns;
+
+begin
+  u_DUT : top_entity port map(
+    i_CLK           => w_CLK,
+    i_CLR_n         => w_CLR_n,
+    i_GO            => w_GO,
+    i_CONTINUE      => w_CONTINUE,
+    i_LIMIAR1       => w_LIMIAR1,
+    i_LIMIAR2       => w_LIMIAR2,
+    i_SELECAO_RUIDO => w_SELECAO_RUIDO,
+    o_READY         => w_READY
+  );
+
+  ---------------------
+  p_CLK : process
+  begin
+    w_CLK <= '1';
+    wait for c_CLK_PERIOD/2;
+    w_CLK <= '0';
+    wait for c_CLK_PERIOD/2;
+  end process p_CLK;
+  ---------------------
+  
+  p_TEST : process
+  begin
+
+    w_CLR_n <= '0'; -- clear 
+    wait for 2 * c_CLK_PERIOD;
+    w_CLR_n         <= '1';
+
+    -- limiar salt and pepper
+    w_LIMIAR1       <= "00110011"; -- int -> 0.2
+    w_LIMIAR2       <= "11001100"; -- int -> 0.8
+
+    w_SELECAO_RUIDO <= '0';
+    w_CONTINUE      <= '0';
+
+    w_GO            <= '1'; -- sinaliza inicio
+
+    wait until w_READY = '1';
+
+    -- TEST DONE
+    assert false report "Test done." severity note;
+    wait;
+
+  end process p_TEST;
+end rtl;
