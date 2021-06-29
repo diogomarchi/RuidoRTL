@@ -80,10 +80,10 @@ ARCHITECTURE rtl OF bloco_operacional IS
   );
   END component;
   
-  component comparador20Bit IS
+  component comparador20Bit IS -- A < B
   PORT (
-    i_ADDR    : IN  STD_LOGIC_VECTOR(19 DOWNTO 0); -- data input 1	 
-	 i_COMPARE : IN  STD_LOGIC_VECTOR(19 DOWNTO 0); -- data input 2
+    i_A : IN  STD_LOGIC_VECTOR(19 DOWNTO 0); -- data input 1	 
+	 i_B : IN  STD_LOGIC_VECTOR(19 DOWNTO 0); -- data input 2
     o_Q : OUT STD_LOGIC                 -- data output
   );
   END component;
@@ -165,9 +165,9 @@ BEGIN
     o_CONT => w_o_CNT_ADDR 
   );
   
-  u_COMP1: comparador20Bit PORT MAP (
-    i_ADDR     => "10111011101110111011",	 -- MAX_ADDRESS
-	 i_COMPARE  => w_o_CNT_ADDR,
+  u_COMP1: comparador20Bit PORT MAP ( -- A < B
+    i_A => w_o_CNT_ADDR, 
+	 i_B => "10111011101110111011",	 -- MAX_ADDRESS
     o_Q => o_NEXT   
   );
   -----------------------------------------------
