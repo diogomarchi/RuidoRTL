@@ -170,7 +170,7 @@ signal w_o_ABS : STD_LOGIC_VECTOR (7 DOWNTO 0); -- 8 bits
 signal w_o_COMP2, w_o_COMP3, w_o_COMP4, w_o_COMP_RUIDO : STD_LOGIC;
 signal w_o_CONT_RUIDO : STD_LOGIC_VECTOR (7 DOWNTO 0); -- 8 bits
   
-  
+signal w_CLEAR_CONT : std_logic;
 
 BEGIN
 -- conectar os componentes
@@ -182,8 +182,10 @@ BEGIN
     o_CONT => w_o_CNT_ADDR 
   );
   
+
+  w_CLEAR_CONT <= (w_o_COMP_RUIDO or not i_CLR_N);
   u_CNT_ADDR_NOIS: contadorEnderecoRuidos PORT MAP (
-    i_CLR  => w_o_COMP_RUIDO,
+    i_CLR  => w_CLEAR_CONT,
     i_CLK  => i_CLK,
     i_ENA  => i_INC_ADDR,
     o_CONT => w_o_CONT_RUIDO
