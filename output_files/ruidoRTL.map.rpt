@@ -1,6 +1,6 @@
 Analysis & Synthesis report for ruidoRTL
-Thu Jun 17 09:16:33 2021
-Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
+Wed Jun 30 14:08:50 2021
+Quartus Prime Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
 
 
 ---------------------
@@ -18,10 +18,10 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
  10. Registers Removed During Synthesis
  11. Removed Registers Triggering Further Register Optimizations
  12. General Register Statistics
- 13. Source assignments for memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_jfr3:auto_generated
- 14. Source assignments for sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_3sr3:auto_generated
- 15. Source assignments for memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated
- 16. Source assignments for memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated
+ 13. Source assignments for memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_db24:auto_generated
+ 14. Source assignments for sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_tn24:auto_generated
+ 15. Source assignments for memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated
+ 16. Source assignments for memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated
  17. Parameter Settings for User Entity Instance: memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component
  18. Parameter Settings for User Entity Instance: sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component
  19. Parameter Settings for User Entity Instance: memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component
@@ -45,129 +45,131 @@ Quartus Prime Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
 ----------------
 ; Legal Notice ;
 ----------------
-Copyright (C) 2016  Intel Corporation. All rights reserved.
+Copyright (C) 2020  Intel Corporation. All rights reserved.
 Your use of Intel Corporation's design tools, logic functions 
-and other software and tools, and its AMPP partner logic 
+and other software and tools, and any partner logic 
 functions, and any output files from any of the foregoing 
 (including device programming or simulation files), and any 
 associated documentation or information are expressly subject 
 to the terms and conditions of the Intel Program License 
 Subscription Agreement, the Intel Quartus Prime License Agreement,
-the Intel MegaCore Function License Agreement, or other 
-applicable license agreement, including, without limitation, 
-that your use is for the sole purpose of programming logic 
-devices manufactured by Intel and sold by Intel or its 
-authorized distributors.  Please refer to the applicable 
-agreement for further details.
+the Intel FPGA IP License Agreement, or other applicable license
+agreement, including, without limitation, that your use is for
+the sole purpose of programming logic devices manufactured by
+Intel and sold by Intel or its authorized distributors.  Please
+refer to the applicable agreement for further details, at
+https://fpgasoftware.intel.com/eula.
 
 
 
-+----------------------------------------------------------------------------------+
-; Analysis & Synthesis Summary                                                     ;
-+------------------------------------+---------------------------------------------+
-; Analysis & Synthesis Status        ; Successful - Thu Jun 17 09:16:32 2021       ;
-; Quartus Prime Version              ; 16.1.0 Build 196 10/24/2016 SJ Lite Edition ;
-; Revision Name                      ; ruidoRTL                                    ;
-; Top-level Entity Name              ; top_entity                                  ;
-; Family                             ; MAX 10                                      ;
-; Total logic elements               ; 34                                          ;
-;     Total combinational functions  ; 31                                          ;
-;     Dedicated logic registers      ; 27                                          ;
-; Total registers                    ; 27                                          ;
-; Total pins                         ; 22                                          ;
-; Total virtual pins                 ; 0                                           ;
-; Total memory bits                  ; 0                                           ;
-; Embedded Multiplier 9-bit elements ; 0                                           ;
-; Total PLLs                         ; 0                                           ;
-; UFM blocks                         ; 0                                           ;
-; ADC blocks                         ; 0                                           ;
-+------------------------------------+---------------------------------------------+
++-------------------------------------------------------------------------------+
+; Analysis & Synthesis Summary                                                  ;
++---------------------------------+---------------------------------------------+
+; Analysis & Synthesis Status     ; Successful - Wed Jun 30 14:08:50 2021       ;
+; Quartus Prime Version           ; 20.1.1 Build 720 11/11/2020 SJ Lite Edition ;
+; Revision Name                   ; ruidoRTL                                    ;
+; Top-level Entity Name           ; top_entity                                  ;
+; Family                          ; Cyclone V                                   ;
+; Logic utilization (in ALMs)     ; N/A                                         ;
+; Total registers                 ; 27                                          ;
+; Total pins                      ; 22                                          ;
+; Total virtual pins              ; 0                                           ;
+; Total block memory bits         ; 0                                           ;
+; Total DSP Blocks                ; 0                                           ;
+; Total HSSI RX PCSs              ; 0                                           ;
+; Total HSSI PMA RX Deserializers ; 0                                           ;
+; Total HSSI TX PCSs              ; 0                                           ;
+; Total HSSI PMA TX Serializers   ; 0                                           ;
+; Total PLLs                      ; 0                                           ;
+; Total DLLs                      ; 0                                           ;
++---------------------------------+---------------------------------------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Settings                                                                                        ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
-; Option                                                                     ; Setting            ; Default Value      ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
-; Device                                                                     ; 10M08DAF484C8G     ;                    ;
-; Top-level entity name                                                      ; top_entity         ; ruidoRTL           ;
-; Family name                                                                ; MAX 10             ; Cyclone V          ;
-; Use smart compilation                                                      ; Off                ; Off                ;
-; Enable parallel Assembler and TimeQuest Timing Analyzer during compilation ; On                 ; On                 ;
-; Enable compact report table                                                ; Off                ; Off                ;
-; Restructure Multiplexers                                                   ; Auto               ; Auto               ;
-; Create Debugging Nodes for IP Cores                                        ; Off                ; Off                ;
-; Preserve fewer node names                                                  ; On                 ; On                 ;
-; OpenCore Plus hardware evaluation                                          ; Enable             ; Enable             ;
-; Verilog Version                                                            ; Verilog_2001       ; Verilog_2001       ;
-; VHDL Version                                                               ; VHDL_1993          ; VHDL_1993          ;
-; State Machine Processing                                                   ; Auto               ; Auto               ;
-; Safe State Machine                                                         ; Off                ; Off                ;
-; Extract Verilog State Machines                                             ; On                 ; On                 ;
-; Extract VHDL State Machines                                                ; On                 ; On                 ;
-; Ignore Verilog initial constructs                                          ; Off                ; Off                ;
-; Iteration limit for constant Verilog loops                                 ; 5000               ; 5000               ;
-; Iteration limit for non-constant Verilog loops                             ; 250                ; 250                ;
-; Add Pass-Through Logic to Inferred RAMs                                    ; On                 ; On                 ;
-; Infer RAMs from Raw Logic                                                  ; On                 ; On                 ;
-; Parallel Synthesis                                                         ; On                 ; On                 ;
-; DSP Block Balancing                                                        ; Auto               ; Auto               ;
-; NOT Gate Push-Back                                                         ; On                 ; On                 ;
-; Power-Up Don't Care                                                        ; On                 ; On                 ;
-; Remove Redundant Logic Cells                                               ; Off                ; Off                ;
-; Remove Duplicate Registers                                                 ; On                 ; On                 ;
-; Ignore CARRY Buffers                                                       ; Off                ; Off                ;
-; Ignore CASCADE Buffers                                                     ; Off                ; Off                ;
-; Ignore GLOBAL Buffers                                                      ; Off                ; Off                ;
-; Ignore ROW GLOBAL Buffers                                                  ; Off                ; Off                ;
-; Ignore LCELL Buffers                                                       ; Off                ; Off                ;
-; Ignore SOFT Buffers                                                        ; On                 ; On                 ;
-; Limit AHDL Integers to 32 Bits                                             ; Off                ; Off                ;
-; Optimization Technique                                                     ; Balanced           ; Balanced           ;
-; Carry Chain Length                                                         ; 70                 ; 70                 ;
-; Auto Carry Chains                                                          ; On                 ; On                 ;
-; Auto Open-Drain Pins                                                       ; On                 ; On                 ;
-; Perform WYSIWYG Primitive Resynthesis                                      ; Off                ; Off                ;
-; Auto ROM Replacement                                                       ; On                 ; On                 ;
-; Auto RAM Replacement                                                       ; On                 ; On                 ;
-; Auto DSP Block Replacement                                                 ; On                 ; On                 ;
-; Auto Shift Register Replacement                                            ; Auto               ; Auto               ;
-; Allow Shift Register Merging across Hierarchies                            ; Auto               ; Auto               ;
-; Auto Clock Enable Replacement                                              ; On                 ; On                 ;
-; Strict RAM Replacement                                                     ; Off                ; Off                ;
-; Allow Synchronous Control Signals                                          ; On                 ; On                 ;
-; Force Use of Synchronous Clear Signals                                     ; Off                ; Off                ;
-; Auto RAM Block Balancing                                                   ; On                 ; On                 ;
-; Auto RAM to Logic Cell Conversion                                          ; Off                ; Off                ;
-; Auto Resource Sharing                                                      ; Off                ; Off                ;
-; Allow Any RAM Size For Recognition                                         ; Off                ; Off                ;
-; Allow Any ROM Size For Recognition                                         ; Off                ; Off                ;
-; Allow Any Shift Register Size For Recognition                              ; Off                ; Off                ;
-; Use LogicLock Constraints during Resource Balancing                        ; On                 ; On                 ;
-; Ignore translate_off and synthesis_off directives                          ; Off                ; Off                ;
-; Timing-Driven Synthesis                                                    ; On                 ; On                 ;
-; Report Parameter Settings                                                  ; On                 ; On                 ;
-; Report Source Assignments                                                  ; On                 ; On                 ;
-; Report Connectivity Checks                                                 ; On                 ; On                 ;
-; Ignore Maximum Fan-Out Assignments                                         ; Off                ; Off                ;
-; Synchronization Register Chain Length                                      ; 2                  ; 2                  ;
-; PowerPlay Power Optimization During Synthesis                              ; Normal compilation ; Normal compilation ;
-; HDL message level                                                          ; Level2             ; Level2             ;
-; Suppress Register Optimization Related Messages                            ; Off                ; Off                ;
-; Number of Removed Registers Reported in Synthesis Report                   ; 5000               ; 5000               ;
-; Number of Swept Nodes Reported in Synthesis Report                         ; 5000               ; 5000               ;
-; Number of Inverted Registers Reported in Synthesis Report                  ; 100                ; 100                ;
-; Clock MUX Protection                                                       ; On                 ; On                 ;
-; Auto Gated Clock Conversion                                                ; Off                ; Off                ;
-; Block Design Naming                                                        ; Auto               ; Auto               ;
-; SDC constraint protection                                                  ; Off                ; Off                ;
-; Synthesis Effort                                                           ; Auto               ; Auto               ;
-; Shift Register Replacement - Allow Asynchronous Clear Signal               ; On                 ; On                 ;
-; Pre-Mapping Resynthesis Optimization                                       ; Off                ; Off                ;
-; Analysis & Synthesis Message Level                                         ; Medium             ; Medium             ;
-; Disable Register Merging Across Hierarchies                                ; Auto               ; Auto               ;
-; Resource Aware Inference For Block RAM                                     ; On                 ; On                 ;
-+----------------------------------------------------------------------------+--------------------+--------------------+
++---------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Settings                                                                                             ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Option                                                                          ; Setting            ; Default Value      ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
+; Device                                                                          ; 5CSEMA5F31C6       ;                    ;
+; Top-level entity name                                                           ; top_entity         ; ruidoRTL           ;
+; Family name                                                                     ; Cyclone V          ; Cyclone V          ;
+; Use smart compilation                                                           ; Off                ; Off                ;
+; Enable parallel Assembler and Timing Analyzer during compilation                ; On                 ; On                 ;
+; Enable compact report table                                                     ; Off                ; Off                ;
+; Restructure Multiplexers                                                        ; Auto               ; Auto               ;
+; MLAB Add Timing Constraints For Mixed-Port Feed-Through Mode Setting Don't Care ; Off                ; Off                ;
+; Create Debugging Nodes for IP Cores                                             ; Off                ; Off                ;
+; Preserve fewer node names                                                       ; On                 ; On                 ;
+; Intel FPGA IP Evaluation Mode                                                   ; Enable             ; Enable             ;
+; Verilog Version                                                                 ; Verilog_2001       ; Verilog_2001       ;
+; VHDL Version                                                                    ; VHDL_1993          ; VHDL_1993          ;
+; State Machine Processing                                                        ; Auto               ; Auto               ;
+; Safe State Machine                                                              ; Off                ; Off                ;
+; Extract Verilog State Machines                                                  ; On                 ; On                 ;
+; Extract VHDL State Machines                                                     ; On                 ; On                 ;
+; Ignore Verilog initial constructs                                               ; Off                ; Off                ;
+; Iteration limit for constant Verilog loops                                      ; 5000               ; 5000               ;
+; Iteration limit for non-constant Verilog loops                                  ; 250                ; 250                ;
+; Add Pass-Through Logic to Inferred RAMs                                         ; On                 ; On                 ;
+; Infer RAMs from Raw Logic                                                       ; On                 ; On                 ;
+; Parallel Synthesis                                                              ; On                 ; On                 ;
+; DSP Block Balancing                                                             ; Auto               ; Auto               ;
+; NOT Gate Push-Back                                                              ; On                 ; On                 ;
+; Power-Up Don't Care                                                             ; On                 ; On                 ;
+; Remove Redundant Logic Cells                                                    ; Off                ; Off                ;
+; Remove Duplicate Registers                                                      ; On                 ; On                 ;
+; Ignore CARRY Buffers                                                            ; Off                ; Off                ;
+; Ignore CASCADE Buffers                                                          ; Off                ; Off                ;
+; Ignore GLOBAL Buffers                                                           ; Off                ; Off                ;
+; Ignore ROW GLOBAL Buffers                                                       ; Off                ; Off                ;
+; Ignore LCELL Buffers                                                            ; Off                ; Off                ;
+; Ignore SOFT Buffers                                                             ; On                 ; On                 ;
+; Limit AHDL Integers to 32 Bits                                                  ; Off                ; Off                ;
+; Optimization Technique                                                          ; Balanced           ; Balanced           ;
+; Carry Chain Length                                                              ; 70                 ; 70                 ;
+; Auto Carry Chains                                                               ; On                 ; On                 ;
+; Auto Open-Drain Pins                                                            ; On                 ; On                 ;
+; Perform WYSIWYG Primitive Resynthesis                                           ; Off                ; Off                ;
+; Auto ROM Replacement                                                            ; On                 ; On                 ;
+; Auto RAM Replacement                                                            ; On                 ; On                 ;
+; Auto DSP Block Replacement                                                      ; On                 ; On                 ;
+; Auto Shift Register Replacement                                                 ; Auto               ; Auto               ;
+; Allow Shift Register Merging across Hierarchies                                 ; Auto               ; Auto               ;
+; Auto Clock Enable Replacement                                                   ; On                 ; On                 ;
+; Strict RAM Replacement                                                          ; Off                ; Off                ;
+; Allow Synchronous Control Signals                                               ; On                 ; On                 ;
+; Force Use of Synchronous Clear Signals                                          ; Off                ; Off                ;
+; Auto Resource Sharing                                                           ; Off                ; Off                ;
+; Allow Any RAM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any ROM Size For Recognition                                              ; Off                ; Off                ;
+; Allow Any Shift Register Size For Recognition                                   ; Off                ; Off                ;
+; Use LogicLock Constraints during Resource Balancing                             ; On                 ; On                 ;
+; Ignore translate_off and synthesis_off directives                               ; Off                ; Off                ;
+; Timing-Driven Synthesis                                                         ; On                 ; On                 ;
+; Report Parameter Settings                                                       ; On                 ; On                 ;
+; Report Source Assignments                                                       ; On                 ; On                 ;
+; Report Connectivity Checks                                                      ; On                 ; On                 ;
+; Ignore Maximum Fan-Out Assignments                                              ; Off                ; Off                ;
+; Synchronization Register Chain Length                                           ; 3                  ; 3                  ;
+; Power Optimization During Synthesis                                             ; Normal compilation ; Normal compilation ;
+; HDL message level                                                               ; Level2             ; Level2             ;
+; Suppress Register Optimization Related Messages                                 ; Off                ; Off                ;
+; Number of Removed Registers Reported in Synthesis Report                        ; 5000               ; 5000               ;
+; Number of Swept Nodes Reported in Synthesis Report                              ; 5000               ; 5000               ;
+; Number of Inverted Registers Reported in Synthesis Report                       ; 100                ; 100                ;
+; Clock MUX Protection                                                            ; On                 ; On                 ;
+; Auto Gated Clock Conversion                                                     ; Off                ; Off                ;
+; Block Design Naming                                                             ; Auto               ; Auto               ;
+; SDC constraint protection                                                       ; Off                ; Off                ;
+; Synthesis Effort                                                                ; Auto               ; Auto               ;
+; Shift Register Replacement - Allow Asynchronous Clear Signal                    ; On                 ; On                 ;
+; Pre-Mapping Resynthesis Optimization                                            ; Off                ; Off                ;
+; Analysis & Synthesis Message Level                                              ; Medium             ; Medium             ;
+; Disable Register Merging Across Hierarchies                                     ; Auto               ; Auto               ;
+; Resource Aware Inference For Block RAM                                          ; On                 ; On                 ;
+; Automatic Parallel Synthesis                                                    ; On                 ; On                 ;
+; Partial Reconfiguration Bitstream ID                                            ; Off                ; Off                ;
++---------------------------------------------------------------------------------+--------------------+--------------------+
 
 
 +------------------------------------------+
@@ -175,57 +177,59 @@ agreement for further details.
 +----------------------------+-------------+
 ; Processors                 ; Number      ;
 +----------------------------+-------------+
-; Number detected on machine ; 8           ;
-; Maximum allowed            ; 4           ;
+; Number detected on machine ; 6           ;
+; Maximum allowed            ; 6           ;
 ;                            ;             ;
 ; Average used               ; 1.00        ;
-; Maximum used               ; 4           ;
+; Maximum used               ; 6           ;
 ;                            ;             ;
 ; Usage by Processor         ; % Time Used ;
 ;     Processor 1            ; 100.0%      ;
-;     Processors 2-4         ;   0.0%      ;
+;     Processors 2-6         ;   0.0%      ;
 +----------------------------+-------------+
 
 
-+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Source Files Read                                                                                                                                               ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
-; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                 ; Library ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
-; bloco_operacional.vhd            ; yes             ; User VHDL File                         ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/bloco_operacional.vhd       ;         ;
-; registrador8bit.vhd              ; yes             ; User VHDL File                         ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/registrador8bit.vhd         ;         ;
-; multiplexador.vhd                ; yes             ; User VHDL File                         ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/multiplexador.vhd           ;         ;
-; contador.vhd                     ; yes             ; User VHDL File                         ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/contador.vhd                ;         ;
-; bloco_controle.vhd               ; yes             ; User VHDL File                         ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/bloco_controle.vhd          ;         ;
-; comparadorMenor8Bit.vhd          ; yes             ; User VHDL File                         ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/comparadorMenor8Bit.vhd     ;         ;
-; comparador20Bit.vhd              ; yes             ; User VHDL File                         ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/comparador20Bit.vhd         ;         ;
-; somador.vhd                      ; yes             ; User VHDL File                         ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/somador.vhd                 ;         ;
-; absoluto.vhd                     ; yes             ; User VHDL File                         ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/absoluto.vhd                ;         ;
-; memoria_gauss.vhd                ; yes             ; User Wizard-Generated File             ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/memoria_gauss.vhd           ;         ;
-; memoria_entrada.vhd              ; yes             ; User Wizard-Generated File             ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/memoria_entrada.vhd         ;         ;
-; sal_e_pimenta.vhd                ; yes             ; User Wizard-Generated File             ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/sal_e_pimenta.vhd           ;         ;
-; memoria_saida.vhd                ; yes             ; User Wizard-Generated File             ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/memoria_saida.vhd           ;         ;
-; top_entity.vhdl                  ; yes             ; User VHDL File                         ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl             ;         ;
-; altsyncram.tdf                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf        ;         ;
-; stratix_ram_block.inc            ; yes             ; Megafunction                           ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/stratix_ram_block.inc ;         ;
-; lpm_mux.inc                      ; yes             ; Megafunction                           ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_mux.inc           ;         ;
-; lpm_decode.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/lpm_decode.inc        ;         ;
-; aglobal161.inc                   ; yes             ; Megafunction                           ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/aglobal161.inc        ;         ;
-; a_rdenreg.inc                    ; yes             ; Megafunction                           ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/a_rdenreg.inc         ;         ;
-; altrom.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altrom.inc            ;         ;
-; altram.inc                       ; yes             ; Megafunction                           ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altram.inc            ;         ;
-; altdpram.inc                     ; yes             ; Megafunction                           ; c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altdpram.inc          ;         ;
-; db/altsyncram_jfr3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_jfr3.tdf      ;         ;
-; gauss_mem.mif                    ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/gauss_mem.mif               ;         ;
-; db/altsyncram_3sr3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_3sr3.tdf      ;         ;
-; sal_e_pimenta.mif                ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/sal_e_pimenta.mif           ;         ;
-; db/altsyncram_g6r3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf      ;         ;
-; image.mif                        ; yes             ; Auto-Found Memory Initialization File  ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/image.mif                   ;         ;
-; db/decode_h7a.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/decode_h7a.tdf           ;         ;
-; db/mux_12b.tdf                   ; yes             ; Auto-Generated Megafunction            ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/mux_12b.tdf              ;         ;
-; db/altsyncram_6cp3.tdf           ; yes             ; Auto-Generated Megafunction            ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf      ;         ;
-; db/decode_aj9.tdf                ; yes             ; Auto-Generated Megafunction            ; C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/decode_aj9.tdf           ;         ;
-+----------------------------------+-----------------+----------------------------------------+------------------------------------------------------------------------------+---------+
++---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Source Files Read                                                                                                                                                                                          ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; File Name with User-Entered Path ; Used in Netlist ; File Type                              ; File Name with Absolute Path                                                                                            ; Library ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
+; bloco_operacional.vhd            ; yes             ; User VHDL File                         ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/bloco_operacional.vhd        ;         ;
+; registrador8bit.vhd              ; yes             ; User VHDL File                         ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/registrador8bit.vhd          ;         ;
+; multiplexador.vhd                ; yes             ; User VHDL File                         ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/multiplexador.vhd            ;         ;
+; contador.vhd                     ; yes             ; User VHDL File                         ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/contador.vhd                 ;         ;
+; bloco_controle.vhd               ; yes             ; User VHDL File                         ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/bloco_controle.vhd           ;         ;
+; comparadorMenor8Bit.vhd          ; yes             ; User VHDL File                         ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/comparadorMenor8Bit.vhd      ;         ;
+; comparador20Bit.vhd              ; yes             ; User VHDL File                         ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/comparador20Bit.vhd          ;         ;
+; somador.vhd                      ; yes             ; User VHDL File                         ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/somador.vhd                  ;         ;
+; absoluto.vhd                     ; yes             ; User VHDL File                         ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/absoluto.vhd                 ;         ;
+; memoria_gauss.vhd                ; yes             ; User Wizard-Generated File             ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/memoria_gauss.vhd            ;         ;
+; memoria_entrada.vhd              ; yes             ; User Wizard-Generated File             ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/memoria_entrada.vhd          ;         ;
+; sal_e_pimenta.vhd                ; yes             ; User Wizard-Generated File             ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/sal_e_pimenta.vhd            ;         ;
+; memoria_saida.vhd                ; yes             ; User Wizard-Generated File             ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/memoria_saida.vhd            ;         ;
+; top_entity.vhdl                  ; yes             ; User VHDL File                         ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl              ;         ;
+; contadorEnderecoRuidos.vhd       ; yes             ; User VHDL File                         ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/contadorEnderecoRuidos.vhd   ;         ;
+; comparadorEnderecoRuidos.vhd     ; yes             ; User VHDL File                         ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/comparadorEnderecoRuidos.vhd ;         ;
+; altsyncram.tdf                   ; yes             ; Megafunction                           ; d:/hd/programfiles/quartus_lite/quartus/libraries/megafunctions/altsyncram.tdf                                          ;         ;
+; stratix_ram_block.inc            ; yes             ; Megafunction                           ; d:/hd/programfiles/quartus_lite/quartus/libraries/megafunctions/stratix_ram_block.inc                                   ;         ;
+; lpm_mux.inc                      ; yes             ; Megafunction                           ; d:/hd/programfiles/quartus_lite/quartus/libraries/megafunctions/lpm_mux.inc                                             ;         ;
+; lpm_decode.inc                   ; yes             ; Megafunction                           ; d:/hd/programfiles/quartus_lite/quartus/libraries/megafunctions/lpm_decode.inc                                          ;         ;
+; aglobal201.inc                   ; yes             ; Megafunction                           ; d:/hd/programfiles/quartus_lite/quartus/libraries/megafunctions/aglobal201.inc                                          ;         ;
+; a_rdenreg.inc                    ; yes             ; Megafunction                           ; d:/hd/programfiles/quartus_lite/quartus/libraries/megafunctions/a_rdenreg.inc                                           ;         ;
+; altrom.inc                       ; yes             ; Megafunction                           ; d:/hd/programfiles/quartus_lite/quartus/libraries/megafunctions/altrom.inc                                              ;         ;
+; altram.inc                       ; yes             ; Megafunction                           ; d:/hd/programfiles/quartus_lite/quartus/libraries/megafunctions/altram.inc                                              ;         ;
+; altdpram.inc                     ; yes             ; Megafunction                           ; d:/hd/programfiles/quartus_lite/quartus/libraries/megafunctions/altdpram.inc                                            ;         ;
+; db/altsyncram_db24.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_db24.tdf       ;         ;
+; gauss_mem.mif                    ; yes             ; Auto-Found Memory Initialization File  ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/gauss_mem.mif                ;         ;
+; db/altsyncram_tn24.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_tn24.tdf       ;         ;
+; sal_e_pimenta.mif                ; yes             ; Auto-Found Memory Initialization File  ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/sal_e_pimenta.mif            ;         ;
+; db/altsyncram_a224.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf       ;         ;
+; image.mif                        ; yes             ; Auto-Found Memory Initialization File  ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/image.mif                    ;         ;
+; db/decode_dla.tdf                ; yes             ; Auto-Generated Megafunction            ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/decode_dla.tdf            ;         ;
+; db/mux_tfb.tdf                   ; yes             ; Auto-Generated Megafunction            ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/mux_tfb.tdf               ;         ;
+; db/altsyncram_0804.tdf           ; yes             ; Auto-Generated Megafunction            ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf       ;         ;
+; db/decode_61a.tdf                ; yes             ; Auto-Generated Megafunction            ; D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/decode_61a.tdf            ;         ;
++----------------------------------+-----------------+----------------------------------------+-------------------------------------------------------------------------------------------------------------------------+---------+
 
 
 +-----------------------------------------------------------+
@@ -233,44 +237,39 @@ agreement for further details.
 +---------------------------------------------+-------------+
 ; Resource                                    ; Usage       ;
 +---------------------------------------------+-------------+
-; Estimated Total logic elements              ; 34          ;
+; Estimate of Logic utilization (ALMs needed) ; 17          ;
 ;                                             ;             ;
-; Total combinational functions               ; 31          ;
-; Logic element usage by number of LUT inputs ;             ;
-;     -- 4 input functions                    ; 8           ;
-;     -- 3 input functions                    ; 2           ;
-;     -- <=2 input functions                  ; 21          ;
+; Combinational ALUT usage for logic          ; 31          ;
+;     -- 7 input functions                    ; 0           ;
+;     -- 6 input functions                    ; 1           ;
+;     -- 5 input functions                    ; 2           ;
+;     -- 4 input functions                    ; 4           ;
+;     -- <=3 input functions                  ; 24          ;
 ;                                             ;             ;
-; Logic elements by mode                      ;             ;
-;     -- normal mode                          ; 13          ;
-;     -- arithmetic mode                      ; 18          ;
-;                                             ;             ;
-; Total registers                             ; 27          ;
-;     -- Dedicated logic registers            ; 27          ;
-;     -- I/O registers                        ; 0           ;
+; Dedicated logic registers                   ; 27          ;
 ;                                             ;             ;
 ; I/O pins                                    ; 22          ;
 ;                                             ;             ;
-; Embedded Multiplier 9-bit elements          ; 0           ;
+; Total DSP Blocks                            ; 0           ;
 ;                                             ;             ;
 ; Maximum fan-out node                        ; i_CLK~input ;
 ; Maximum fan-out                             ; 27          ;
-; Total fan-out                               ; 202         ;
-; Average fan-out                             ; 1.98        ;
+; Total fan-out                               ; 206         ;
+; Average fan-out                             ; 2.02        ;
 +---------------------------------------------+-------------+
 
 
-+----------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
-; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                                                                          ;
-+-----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------+-------------------+--------------+
-; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Memory Bits ; UFM Blocks ; DSP Elements ; DSP 9x9 ; DSP 18x18 ; Pins ; Virtual Pins ; ADC blocks ; Full Hierarchy Name                                              ; Entity Name       ; Library Name ;
-+-----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------+-------------------+--------------+
-; |top_entity                       ; 31 (0)              ; 27 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 22   ; 0            ; 0          ; |top_entity                                                      ; top_entity        ; work         ;
-;    |bloco_controle:u_CTRL|        ; 4 (4)               ; 7 (7)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_entity|bloco_controle:u_CTRL                                ; bloco_controle    ; work         ;
-;    |bloco_operacional:u_DATAPATH| ; 27 (0)              ; 20 (0)                    ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_entity|bloco_operacional:u_DATAPATH                         ; bloco_operacional ; work         ;
-;       |comparador20Bit:u_COMP1|   ; 7 (7)               ; 0 (0)                     ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_entity|bloco_operacional:u_DATAPATH|comparador20Bit:u_COMP1 ; comparador20Bit   ; work         ;
-;       |contador:u_CNT_ADDR|       ; 20 (20)             ; 20 (20)                   ; 0           ; 0          ; 0            ; 0       ; 0         ; 0    ; 0            ; 0          ; |top_entity|bloco_operacional:u_DATAPATH|contador:u_CNT_ADDR     ; contador          ; work         ;
-+-----------------------------------+---------------------+---------------------------+-------------+------------+--------------+---------+-----------+------+--------------+------------+------------------------------------------------------------------+-------------------+--------------+
++--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------+
+; Analysis & Synthesis Resource Utilization by Entity                                                                                                                                                                                              ;
++-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------+-------------------+--------------+
+; Compilation Hierarchy Node        ; Combinational ALUTs ; Dedicated Logic Registers ; Block Memory Bits ; DSP Blocks ; Pins ; Virtual Pins ; Full Hierarchy Name                                              ; Entity Name       ; Library Name ;
++-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------+-------------------+--------------+
+; |top_entity                       ; 31 (0)              ; 27 (0)                    ; 0                 ; 0          ; 22   ; 0            ; |top_entity                                                      ; top_entity        ; work         ;
+;    |bloco_controle:u_CTRL|        ; 4 (4)               ; 7 (7)                     ; 0                 ; 0          ; 0    ; 0            ; |top_entity|bloco_controle:u_CTRL                                ; bloco_controle    ; work         ;
+;    |bloco_operacional:u_DATAPATH| ; 27 (0)              ; 20 (0)                    ; 0                 ; 0          ; 0    ; 0            ; |top_entity|bloco_operacional:u_DATAPATH                         ; bloco_operacional ; work         ;
+;       |comparador20Bit:u_COMP1|   ; 7 (7)               ; 0 (0)                     ; 0                 ; 0          ; 0    ; 0            ; |top_entity|bloco_operacional:u_DATAPATH|comparador20Bit:u_COMP1 ; comparador20Bit   ; work         ;
+;       |contador:u_CNT_ADDR|       ; 20 (20)             ; 20 (20)                   ; 0                 ; 0          ; 0    ; 0            ; |top_entity|bloco_operacional:u_DATAPATH|contador:u_CNT_ADDR     ; contador          ; work         ;
++-----------------------------------+---------------------+---------------------------+-------------------+------------+------+--------------+------------------------------------------------------------------+-------------------+--------------+
 Note: For table entries with two numbers listed, the numbers in parentheses indicate the number of resources of the given type used by the specific entity alone. The numbers listed outside of parentheses indicate the total resources of the given type used by the specific entity and all of its sub-entities in the hierarchy.
 
 
@@ -322,17 +321,15 @@ Encoding Type:  One-Hot
 ; bloco_operacional:u_DATAPATH|registrador8bit:u_REG2|w_SAIDA[6]                                                        ; Lost fanout        ;
 ; bloco_operacional:u_DATAPATH|registrador8bit:u_REG1|w_SAIDA[6]                                                        ; Lost fanout        ;
 ; bloco_operacional:u_DATAPATH|registrador8bit:u_REG2|w_SAIDA[7]                                                        ; Lost fanout        ;
-; sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_3sr3:auto_generated|rden_a_store     ; Lost fanout        ;
 ; bloco_operacional:u_DATAPATH|registrador8bit:u_REG1|w_SAIDA[7]                                                        ; Lost fanout        ;
-; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|out_address_reg_a[2] ; Lost fanout        ;
-; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|address_reg_a[2]     ; Lost fanout        ;
-; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|out_address_reg_a[1] ; Lost fanout        ;
-; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|address_reg_a[1]     ; Lost fanout        ;
-; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|rden_a_store         ; Lost fanout        ;
-; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|out_address_reg_a[0] ; Lost fanout        ;
-; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|address_reg_a[0]     ; Lost fanout        ;
-; memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_jfr3:auto_generated|rden_a_store             ; Lost fanout        ;
-; Total Number of Removed Registers = 25                                                                                ;                    ;
+; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|out_address_reg_a[2] ; Lost fanout        ;
+; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|address_reg_a[2]     ; Lost fanout        ;
+; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|out_address_reg_a[1] ; Lost fanout        ;
+; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|address_reg_a[1]     ; Lost fanout        ;
+; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|out_address_reg_a[0] ; Lost fanout        ;
+; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|address_reg_a[0]     ; Lost fanout        ;
+; bloco_operacional:u_DATAPATH|contadorEnderecoRuidos:u_CNT_ADDR_NOIS|w_COUNTER[0..7]                                   ; Lost fanout        ;
+; Total Number of Removed Registers = 30                                                                                ;                    ;
 +-----------------------------------------------------------------------------------------------------------------------+--------------------+
 
 
@@ -341,10 +338,11 @@ Encoding Type:  One-Hot
 +-----------------------------------------------------------------------------------------------------------------------+--------------------+------------------------------------------------------------------------------------------------------------------------+
 ; Register name                                                                                                         ; Reason for Removal ; Registers Removed due to This Register                                                                                 ;
 +-----------------------------------------------------------------------------------------------------------------------+--------------------+------------------------------------------------------------------------------------------------------------------------+
-; bloco_operacional:u_DATAPATH|registrador8bit:u_REG2|w_SAIDA[0]                                                        ; Lost Fanouts       ; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|out_address_reg_a[2], ;
-;                                                                                                                       ;                    ; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|address_reg_a[2]      ;
-; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|out_address_reg_a[1] ; Lost Fanouts       ; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|address_reg_a[1]      ;
-; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|out_address_reg_a[0] ; Lost Fanouts       ; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|address_reg_a[0]      ;
+; bloco_operacional:u_DATAPATH|registrador8bit:u_REG2|w_SAIDA[0]                                                        ; Lost Fanouts       ; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|out_address_reg_a[2], ;
+;                                                                                                                       ;                    ; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|address_reg_a[2],     ;
+;                                                                                                                       ;                    ; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|out_address_reg_a[1], ;
+;                                                                                                                       ;                    ; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|address_reg_a[1]      ;
+; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|out_address_reg_a[0] ; Lost Fanouts       ; memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|address_reg_a[0]      ;
 +-----------------------------------------------------------------------------------------------------------------------+--------------------+------------------------------------------------------------------------------------------------------------------------+
 
 
@@ -358,13 +356,13 @@ Encoding Type:  One-Hot
 ; Number of registers using Synchronous Load   ; 0     ;
 ; Number of registers using Asynchronous Clear ; 27    ;
 ; Number of registers using Asynchronous Load  ; 0     ;
-; Number of registers using Clock Enable       ; 19    ;
+; Number of registers using Clock Enable       ; 20    ;
 ; Number of registers using Preset             ; 0     ;
 +----------------------------------------------+-------+
 
 
 +---------------------------------------------------------------------------------------------------------------------+
-; Source assignments for memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_jfr3:auto_generated ;
+; Source assignments for memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_db24:auto_generated ;
 +---------------------------------+--------------------+------+-------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                    ;
 +---------------------------------+--------------------+------+-------------------------------------------------------+
@@ -373,7 +371,7 @@ Encoding Type:  One-Hot
 
 
 +-----------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_3sr3:auto_generated ;
+; Source assignments for sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_tn24:auto_generated ;
 +---------------------------------+--------------------+------+---------------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                            ;
 +---------------------------------+--------------------+------+---------------------------------------------------------------+
@@ -382,7 +380,7 @@ Encoding Type:  One-Hot
 
 
 +-------------------------------------------------------------------------------------------------------------------------+
-; Source assignments for memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated ;
+; Source assignments for memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated ;
 +---------------------------------+--------------------+------+-----------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                        ;
 +---------------------------------+--------------------+------+-----------------------------------------------------------+
@@ -391,7 +389,7 @@ Encoding Type:  One-Hot
 
 
 +---------------------------------------------------------------------------------------------------------------------+
-; Source assignments for memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated ;
+; Source assignments for memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated ;
 +---------------------------------+--------------------+------+-------------------------------------------------------+
 ; Assignment                      ; Value              ; From ; To                                                    ;
 +---------------------------------+--------------------+------+-------------------------------------------------------+
@@ -454,8 +452,8 @@ Encoding Type:  One-Hot
 ; ENABLE_ECC                         ; FALSE                ; Untyped                                        ;
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                        ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                                 ;
-; DEVICE_FAMILY                      ; MAX 10               ; Untyped                                        ;
-; CBXI_PARAMETER                     ; altsyncram_jfr3      ; Untyped                                        ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                        ;
+; CBXI_PARAMETER                     ; altsyncram_db24      ; Untyped                                        ;
 +------------------------------------+----------------------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -515,8 +513,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ENABLE_ECC                         ; FALSE                ; Untyped                                                ;
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                                ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                                         ;
-; DEVICE_FAMILY                      ; MAX 10               ; Untyped                                                ;
-; CBXI_PARAMETER                     ; altsyncram_3sr3      ; Untyped                                                ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                                ;
+; CBXI_PARAMETER                     ; altsyncram_tn24      ; Untyped                                                ;
 +------------------------------------+----------------------+--------------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -576,8 +574,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ENABLE_ECC                         ; FALSE                ; Untyped                                            ;
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                            ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                                     ;
-; DEVICE_FAMILY                      ; MAX 10               ; Untyped                                            ;
-; CBXI_PARAMETER                     ; altsyncram_g6r3      ; Untyped                                            ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                            ;
+; CBXI_PARAMETER                     ; altsyncram_a224      ; Untyped                                            ;
 +------------------------------------+----------------------+----------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -637,8 +635,8 @@ Note: In order to hide this table in the UI and the text report file, please set
 ; ENABLE_ECC                         ; FALSE                ; Untyped                                        ;
 ; ECC_PIPELINE_STAGE_ENABLED         ; FALSE                ; Untyped                                        ;
 ; WIDTH_ECCSTATUS                    ; 3                    ; Signed Integer                                 ;
-; DEVICE_FAMILY                      ; MAX 10               ; Untyped                                        ;
-; CBXI_PARAMETER                     ; altsyncram_6cp3      ; Untyped                                        ;
+; DEVICE_FAMILY                      ; Cyclone V            ; Untyped                                        ;
+; CBXI_PARAMETER                     ; altsyncram_0804      ; Untyped                                        ;
 +------------------------------------+----------------------+------------------------------------------------+
 Note: In order to hide this table in the UI and the text report file, please set the "Show Parameter Settings in Synthesis Report" option in "Analysis and Synthesis Settings -> More Settings" to "Off".
 
@@ -761,21 +759,21 @@ Note: In order to hide this table in the UI and the text report file, please set
 
 +----------------------------------------------------------------------------------+
 ; Port Connectivity Checks: "bloco_operacional:u_DATAPATH|comparador20Bit:u_COMP1" ;
-+----------------+-------+----------+----------------------------------------------+
-; Port           ; Type  ; Severity ; Details                                      ;
-+----------------+-------+----------+----------------------------------------------+
-; i_addr[17..15] ; Input ; Info     ; Stuck at VCC                                 ;
-; i_addr[13..11] ; Input ; Info     ; Stuck at VCC                                 ;
-; i_addr[9..7]   ; Input ; Info     ; Stuck at VCC                                 ;
-; i_addr[5..3]   ; Input ; Info     ; Stuck at VCC                                 ;
-; i_addr[1..0]   ; Input ; Info     ; Stuck at VCC                                 ;
-; i_addr[19]     ; Input ; Info     ; Stuck at VCC                                 ;
-; i_addr[18]     ; Input ; Info     ; Stuck at GND                                 ;
-; i_addr[14]     ; Input ; Info     ; Stuck at GND                                 ;
-; i_addr[10]     ; Input ; Info     ; Stuck at GND                                 ;
-; i_addr[6]      ; Input ; Info     ; Stuck at GND                                 ;
-; i_addr[2]      ; Input ; Info     ; Stuck at GND                                 ;
-+----------------+-------+----------+----------------------------------------------+
++-------------+-------+----------+-------------------------------------------------+
+; Port        ; Type  ; Severity ; Details                                         ;
++-------------+-------+----------+-------------------------------------------------+
+; i_b[17..15] ; Input ; Info     ; Stuck at VCC                                    ;
+; i_b[13..11] ; Input ; Info     ; Stuck at VCC                                    ;
+; i_b[9..7]   ; Input ; Info     ; Stuck at VCC                                    ;
+; i_b[5..3]   ; Input ; Info     ; Stuck at VCC                                    ;
+; i_b[1..0]   ; Input ; Info     ; Stuck at VCC                                    ;
+; i_b[19]     ; Input ; Info     ; Stuck at VCC                                    ;
+; i_b[18]     ; Input ; Info     ; Stuck at GND                                    ;
+; i_b[14]     ; Input ; Info     ; Stuck at GND                                    ;
+; i_b[10]     ; Input ; Info     ; Stuck at GND                                    ;
+; i_b[6]      ; Input ; Info     ; Stuck at GND                                    ;
+; i_b[2]      ; Input ; Info     ; Stuck at GND                                    ;
++-------------+-------+----------+-------------------------------------------------+
 
 
 +--------------------------------------------------------------------------------------------------------------------------+
@@ -792,22 +790,24 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-----------------------+-----------------------------+
 ; Type                  ; Count                       ;
 +-----------------------+-----------------------------+
-; boundary_port         ; 22                          ;
-; cycloneiii_ff         ; 27                          ;
-;     CLR               ; 8                           ;
-;     ENA CLR           ; 19                          ;
-; cycloneiii_lcell_comb ; 31                          ;
-;     arith             ; 18                          ;
-;         2 data inputs ; 17                          ;
-;         3 data inputs ; 1                           ;
-;     normal            ; 13                          ;
+; arriav_ff             ; 27                          ;
+;     CLR               ; 7                           ;
+;     ENA CLR           ; 20                          ;
+; arriav_lcell_comb     ; 31                          ;
+;     arith             ; 19                          ;
+;         1 data inputs ; 18                          ;
+;         2 data inputs ; 1                           ;
+;     normal            ; 12                          ;
 ;         1 data inputs ; 1                           ;
-;         2 data inputs ; 3                           ;
-;         3 data inputs ; 1                           ;
-;         4 data inputs ; 8                           ;
+;         2 data inputs ; 1                           ;
+;         3 data inputs ; 3                           ;
+;         4 data inputs ; 4                           ;
+;         5 data inputs ; 2                           ;
+;         6 data inputs ; 1                           ;
+; boundary_port         ; 22                          ;
 ;                       ;                             ;
-; Max LUT depth         ; 4.00                        ;
-; Average LUT depth     ; 2.43                        ;
+; Max LUT depth         ; 3.00                        ;
+; Average LUT depth     ; 2.28                        ;
 +-----------------------+-----------------------------+
 
 
@@ -816,7 +816,7 @@ Note: In order to hide this table in the UI and the text report file, please set
 +----------------+--------------+
 ; Partition Name ; Elapsed Time ;
 +----------------+--------------+
-; Top            ; 00:00:00     ;
+; Top            ; 00:00:01     ;
 +----------------+--------------+
 
 
@@ -825,71 +825,79 @@ Note: In order to hide this table in the UI and the text report file, please set
 +-------------------------------+
 Info: *******************************************************************
 Info: Running Quartus Prime Analysis & Synthesis
-    Info: Version 16.1.0 Build 196 10/24/2016 SJ Lite Edition
-    Info: Processing started: Thu Jun 17 09:16:13 2021
+    Info: Version 20.1.1 Build 720 11/11/2020 SJ Lite Edition
+    Info: Processing started: Wed Jun 30 14:08:35 2021
 Info: Command: quartus_map --read_settings_files=on --write_settings_files=off ruidoRTL -c ruidoRTL
 Warning (18236): Number of processors has not been specified which may cause overloading on shared machines.  Set the global assignment NUM_PARALLEL_PROCESSORS in your QSF to an appropriate value for best performance.
-Info (20030): Parallel compilation is enabled and will use 4 of the 4 processors detected
+Info (20030): Parallel compilation is enabled and will use 6 of the 6 processors detected
 Info (12021): Found 2 design units, including 1 entities, in source file bloco_operacional.vhd
-    Info (12022): Found design unit 1: bloco_operacional-rtl File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/bloco_operacional.vhd Line: 37
-    Info (12023): Found entity 1: bloco_operacional File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/bloco_operacional.vhd Line: 13
+    Info (12022): Found design unit 1: bloco_operacional-rtl File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/bloco_operacional.vhd Line: 37
+    Info (12023): Found entity 1: bloco_operacional File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/bloco_operacional.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file comparadormaior8bit.vhd
-    Info (12022): Found design unit 1: comparadorMaior8Bit-arch_1 File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/comparadorMaior8Bit.vhd Line: 21
-    Info (12023): Found entity 1: comparadorMaior8Bit File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/comparadorMaior8Bit.vhd Line: 13
+    Info (12022): Found design unit 1: comparadorMaior8Bit-arch_1 File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/comparadorMaior8Bit.vhd Line: 21
+    Info (12023): Found entity 1: comparadorMaior8Bit File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/comparadorMaior8Bit.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file registrador8bit.vhd
-    Info (12022): Found design unit 1: registrador8bit-arch1 File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/registrador8bit.vhd Line: 21
-    Info (12023): Found entity 1: registrador8bit File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/registrador8bit.vhd Line: 11
+    Info (12022): Found design unit 1: registrador8bit-arch1 File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/registrador8bit.vhd Line: 21
+    Info (12023): Found entity 1: registrador8bit File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/registrador8bit.vhd Line: 11
 Info (12021): Found 2 design units, including 1 entities, in source file multiplexador.vhd
-    Info (12022): Found design unit 1: multiplexador-arch_1 File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/multiplexador.vhd Line: 21
-    Info (12023): Found entity 1: multiplexador File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/multiplexador.vhd Line: 13
+    Info (12022): Found design unit 1: multiplexador-arch_1 File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/multiplexador.vhd Line: 21
+    Info (12023): Found entity 1: multiplexador File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/multiplexador.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file contador.vhd
-    Info (12022): Found design unit 1: contador-rtl File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/contador.vhd Line: 22
-    Info (12023): Found entity 1: contador File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/contador.vhd Line: 13
+    Info (12022): Found design unit 1: contador-rtl File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/contador.vhd Line: 22
+    Info (12023): Found entity 1: contador File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/contador.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file bloco_controle.vhd
-    Info (12022): Found design unit 1: bloco_controle-rtl File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/bloco_controle.vhd Line: 28
-    Info (12023): Found entity 1: bloco_controle File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/bloco_controle.vhd Line: 13
+    Info (12022): Found design unit 1: bloco_controle-rtl File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/bloco_controle.vhd Line: 28
+    Info (12023): Found entity 1: bloco_controle File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/bloco_controle.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file comparadormenor8bit.vhd
-    Info (12022): Found design unit 1: comparadorMenor8Bit-arch_1 File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/comparadorMenor8Bit.vhd Line: 21
-    Info (12023): Found entity 1: comparadorMenor8Bit File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/comparadorMenor8Bit.vhd Line: 13
+    Info (12022): Found design unit 1: comparadorMenor8Bit-arch_1 File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/comparadorMenor8Bit.vhd Line: 21
+    Info (12023): Found entity 1: comparadorMenor8Bit File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/comparadorMenor8Bit.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file comparador20bit.vhd
-    Info (12022): Found design unit 1: comparador20Bit-arch_1 File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/comparador20Bit.vhd Line: 21
-    Info (12023): Found entity 1: comparador20Bit File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/comparador20Bit.vhd Line: 13
+    Info (12022): Found design unit 1: comparador20Bit-arch_1 File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/comparador20Bit.vhd Line: 21
+    Info (12023): Found entity 1: comparador20Bit File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/comparador20Bit.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file somador.vhd
-    Info (12022): Found design unit 1: somador-arch_1 File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/somador.vhd Line: 21
-    Info (12023): Found entity 1: somador File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/somador.vhd Line: 13
+    Info (12022): Found design unit 1: somador-arch_1 File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/somador.vhd Line: 21
+    Info (12023): Found entity 1: somador File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/somador.vhd Line: 13
 Info (12021): Found 2 design units, including 1 entities, in source file absoluto.vhd
-    Info (12022): Found design unit 1: absoluto-rtl File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/absoluto.vhd Line: 21
-    Info (12023): Found entity 1: absoluto File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/absoluto.vhd Line: 14
+    Info (12022): Found design unit 1: absoluto-rtl File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/absoluto.vhd Line: 21
+    Info (12023): Found entity 1: absoluto File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/absoluto.vhd Line: 14
 Info (12021): Found 2 design units, including 1 entities, in source file memoria_gauss.vhd
-    Info (12022): Found design unit 1: memoria_gauss-SYN File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/memoria_gauss.vhd Line: 54
-    Info (12023): Found entity 1: memoria_gauss File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/memoria_gauss.vhd Line: 43
+    Info (12022): Found design unit 1: memoria_gauss-SYN File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/memoria_gauss.vhd Line: 54
+    Info (12023): Found entity 1: memoria_gauss File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/memoria_gauss.vhd Line: 43
 Info (12021): Found 2 design units, including 1 entities, in source file memoria_entrada.vhd
-    Info (12022): Found design unit 1: memoria_entrada-SYN File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/memoria_entrada.vhd Line: 54
-    Info (12023): Found entity 1: memoria_entrada File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/memoria_entrada.vhd Line: 43
+    Info (12022): Found design unit 1: memoria_entrada-SYN File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/memoria_entrada.vhd Line: 54
+    Info (12023): Found entity 1: memoria_entrada File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/memoria_entrada.vhd Line: 43
 Info (12021): Found 2 design units, including 1 entities, in source file sal_e_pimenta.vhd
-    Info (12022): Found design unit 1: sal_e_pimenta-SYN File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/sal_e_pimenta.vhd Line: 54
-    Info (12023): Found entity 1: sal_e_pimenta File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/sal_e_pimenta.vhd Line: 43
+    Info (12022): Found design unit 1: sal_e_pimenta-SYN File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/sal_e_pimenta.vhd Line: 54
+    Info (12023): Found entity 1: sal_e_pimenta File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/sal_e_pimenta.vhd Line: 43
 Info (12021): Found 2 design units, including 1 entities, in source file memoria_saida.vhd
-    Info (12022): Found design unit 1: memoria_saida-SYN File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/memoria_saida.vhd Line: 55
-    Info (12023): Found entity 1: memoria_saida File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/memoria_saida.vhd Line: 43
+    Info (12022): Found design unit 1: memoria_saida-SYN File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/memoria_saida.vhd Line: 55
+    Info (12023): Found entity 1: memoria_saida File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/memoria_saida.vhd Line: 43
 Info (12021): Found 2 design units, including 1 entities, in source file top_entity.vhdl
-    Info (12022): Found design unit 1: top_entity-rtl File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 33
-    Info (12023): Found entity 1: top_entity File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 13
+    Info (12022): Found design unit 1: top_entity-rtl File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 33
+    Info (12023): Found entity 1: top_entity File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file contadorenderecoruidos.vhd
+    Info (12022): Found design unit 1: contadorEnderecoRuidos-rtl File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/contadorEnderecoRuidos.vhd Line: 22
+    Info (12023): Found entity 1: contadorEnderecoRuidos File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/contadorEnderecoRuidos.vhd Line: 13
+Info (12021): Found 2 design units, including 1 entities, in source file comparadorenderecoruidos.vhd
+    Info (12022): Found design unit 1: comparadorEnderecoRuidos-arch_1 File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/comparadorEnderecoRuidos.vhd Line: 20
+    Info (12023): Found entity 1: comparadorEnderecoRuidos File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/comparadorEnderecoRuidos.vhd Line: 13
 Info (12127): Elaborating entity "top_entity" for the top level hierarchy
-Warning (10036): Verilog HDL or VHDL warning at top_entity.vhdl(127): object "w_o_PIX_RAM" assigned a value but never read File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 127
-Info (12128): Elaborating entity "bloco_controle" for hierarchy "bloco_controle:u_CTRL" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 132
-Info (12128): Elaborating entity "bloco_operacional" for hierarchy "bloco_operacional:u_DATAPATH" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 145
-Info (12128): Elaborating entity "contador" for hierarchy "bloco_operacional:u_DATAPATH|contador:u_CNT_ADDR" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/bloco_operacional.vhd Line: 161
-Info (12128): Elaborating entity "comparador20Bit" for hierarchy "bloco_operacional:u_DATAPATH|comparador20Bit:u_COMP1" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/bloco_operacional.vhd Line: 168
-Info (12128): Elaborating entity "somador" for hierarchy "bloco_operacional:u_DATAPATH|somador:u_ADDER" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/bloco_operacional.vhd Line: 175
-Info (12128): Elaborating entity "multiplexador" for hierarchy "bloco_operacional:u_DATAPATH|multiplexador:u_MUX1" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/bloco_operacional.vhd Line: 181
-Info (12128): Elaborating entity "absoluto" for hierarchy "bloco_operacional:u_DATAPATH|absoluto:u_ABS" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/bloco_operacional.vhd Line: 190
-Info (12128): Elaborating entity "comparadorMenor8Bit" for hierarchy "bloco_operacional:u_DATAPATH|comparadorMenor8Bit:u_COMP2" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/bloco_operacional.vhd Line: 195
-Info (12128): Elaborating entity "registrador8bit" for hierarchy "bloco_operacional:u_DATAPATH|registrador8bit:u_REG1" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/bloco_operacional.vhd Line: 258
-Info (12128): Elaborating entity "memoria_gauss" for hierarchy "memoria_gauss:u_MEMORIA_GAUSS" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 167
-Info (12128): Elaborating entity "altsyncram" for hierarchy "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/memoria_gauss.vhd Line: 61
-Info (12130): Elaborated megafunction instantiation "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/memoria_gauss.vhd Line: 61
-Info (12133): Instantiated megafunction "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/memoria_gauss.vhd Line: 61
+Warning (10036): Verilog HDL or VHDL warning at top_entity.vhdl(127): object "w_o_PIX_RAM" assigned a value but never read File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 127
+Info (12128): Elaborating entity "bloco_controle" for hierarchy "bloco_controle:u_CTRL" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 132
+Info (12128): Elaborating entity "bloco_operacional" for hierarchy "bloco_operacional:u_DATAPATH" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 145
+Info (12128): Elaborating entity "contador" for hierarchy "bloco_operacional:u_DATAPATH|contador:u_CNT_ADDR" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/bloco_operacional.vhd Line: 178
+Info (12128): Elaborating entity "contadorEnderecoRuidos" for hierarchy "bloco_operacional:u_DATAPATH|contadorEnderecoRuidos:u_CNT_ADDR_NOIS" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/bloco_operacional.vhd Line: 185
+Info (12128): Elaborating entity "comparador20Bit" for hierarchy "bloco_operacional:u_DATAPATH|comparador20Bit:u_COMP1" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/bloco_operacional.vhd Line: 192
+Info (12128): Elaborating entity "comparadorEnderecoRuidos" for hierarchy "bloco_operacional:u_DATAPATH|comparadorEnderecoRuidos:u_COMP_ADDR_RUIDO" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/bloco_operacional.vhd Line: 198
+Info (12128): Elaborating entity "somador" for hierarchy "bloco_operacional:u_DATAPATH|somador:u_ADDER" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/bloco_operacional.vhd Line: 204
+Info (12128): Elaborating entity "multiplexador" for hierarchy "bloco_operacional:u_DATAPATH|multiplexador:u_MUX1" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/bloco_operacional.vhd Line: 210
+Info (12128): Elaborating entity "absoluto" for hierarchy "bloco_operacional:u_DATAPATH|absoluto:u_ABS" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/bloco_operacional.vhd Line: 219
+Info (12128): Elaborating entity "comparadorMenor8Bit" for hierarchy "bloco_operacional:u_DATAPATH|comparadorMenor8Bit:u_COMP2" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/bloco_operacional.vhd Line: 224
+Info (12128): Elaborating entity "registrador8bit" for hierarchy "bloco_operacional:u_DATAPATH|registrador8bit:u_REG1" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/bloco_operacional.vhd Line: 287
+Info (12128): Elaborating entity "memoria_gauss" for hierarchy "memoria_gauss:u_MEMORIA_GAUSS" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 167
+Info (12128): Elaborating entity "altsyncram" for hierarchy "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/memoria_gauss.vhd Line: 61
+Info (12130): Elaborated megafunction instantiation "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/memoria_gauss.vhd Line: 61
+Info (12133): Instantiated megafunction "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component" with the following parameter: File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/memoria_gauss.vhd Line: 61
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -940,13 +948,13 @@ Info (12133): Instantiated megafunction "memoria_gauss:u_MEMORIA_GAUSS|altsyncra
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_jfr3.tdf
-    Info (12023): Found entity 1: altsyncram_jfr3 File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_jfr3.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_jfr3" for hierarchy "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_jfr3:auto_generated" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "sal_e_pimenta" for hierarchy "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 174
-Info (12128): Elaborating entity "altsyncram" for hierarchy "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/sal_e_pimenta.vhd Line: 61
-Info (12130): Elaborated megafunction instantiation "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/sal_e_pimenta.vhd Line: 61
-Info (12133): Instantiated megafunction "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/sal_e_pimenta.vhd Line: 61
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_db24.tdf
+    Info (12023): Found entity 1: altsyncram_db24 File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_db24.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_db24" for hierarchy "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_db24:auto_generated" File: d:/hd/programfiles/quartus_lite/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "sal_e_pimenta" for hierarchy "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 174
+Info (12128): Elaborating entity "altsyncram" for hierarchy "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/sal_e_pimenta.vhd Line: 61
+Info (12130): Elaborated megafunction instantiation "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/sal_e_pimenta.vhd Line: 61
+Info (12133): Instantiated megafunction "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component" with the following parameter: File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/sal_e_pimenta.vhd Line: 61
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -997,13 +1005,13 @@ Info (12133): Instantiated megafunction "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|a
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_3sr3.tdf
-    Info (12023): Found entity 1: altsyncram_3sr3 File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_3sr3.tdf Line: 28
-Info (12128): Elaborating entity "altsyncram_3sr3" for hierarchy "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_3sr3:auto_generated" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12128): Elaborating entity "memoria_entrada" for hierarchy "memoria_entrada:u_MEMORIA_ENTRADA" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 181
-Info (12128): Elaborating entity "altsyncram" for hierarchy "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/memoria_entrada.vhd Line: 61
-Info (12130): Elaborated megafunction instantiation "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/memoria_entrada.vhd Line: 61
-Info (12133): Instantiated megafunction "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/memoria_entrada.vhd Line: 61
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_tn24.tdf
+    Info (12023): Found entity 1: altsyncram_tn24 File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_tn24.tdf Line: 28
+Info (12128): Elaborating entity "altsyncram_tn24" for hierarchy "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_tn24:auto_generated" File: d:/hd/programfiles/quartus_lite/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12128): Elaborating entity "memoria_entrada" for hierarchy "memoria_entrada:u_MEMORIA_ENTRADA" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 181
+Info (12128): Elaborating entity "altsyncram" for hierarchy "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/memoria_entrada.vhd Line: 61
+Info (12130): Elaborated megafunction instantiation "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/memoria_entrada.vhd Line: 61
+Info (12133): Instantiated megafunction "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component" with the following parameter: File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/memoria_entrada.vhd Line: 61
     Info (12134): Parameter "address_aclr_a" = "NONE"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -1054,20 +1062,19 @@ Info (12133): Instantiated megafunction "memoria_entrada:u_MEMORIA_ENTRADA|altsy
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_g6r3.tdf
-    Info (12023): Found entity 1: altsyncram_g6r3 File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 32
-Info (12128): Elaborating entity "altsyncram_g6r3" for hierarchy "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Critical Warning (127005): Memory depth (65536) in the design file differs from memory depth (4096) in the Memory Initialization File "C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/image.mif" -- setting initial value for remaining addresses to 0 File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/memoria_entrada.vhd Line: 61
-Info (12021): Found 1 design units, including 1 entities, in source file db/decode_h7a.tdf
-    Info (12023): Found entity 1: decode_h7a File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/decode_h7a.tdf Line: 23
-Info (12128): Elaborating entity "decode_h7a" for hierarchy "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|decode_h7a:rden_decode" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 43
-Info (12021): Found 1 design units, including 1 entities, in source file db/mux_12b.tdf
-    Info (12023): Found entity 1: mux_12b File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/mux_12b.tdf Line: 23
-Info (12128): Elaborating entity "mux_12b" for hierarchy "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|mux_12b:mux2" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 44
-Info (12128): Elaborating entity "memoria_saida" for hierarchy "memoria_saida:u_MEMORIA_SAIDA" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 188
-Info (12128): Elaborating entity "altsyncram" for hierarchy "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/memoria_saida.vhd Line: 62
-Info (12130): Elaborated megafunction instantiation "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/memoria_saida.vhd Line: 62
-Info (12133): Instantiated megafunction "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component" with the following parameter: File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/memoria_saida.vhd Line: 62
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_a224.tdf
+    Info (12023): Found entity 1: altsyncram_a224 File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 32
+Info (12128): Elaborating entity "altsyncram_a224" for hierarchy "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated" File: d:/hd/programfiles/quartus_lite/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_dla.tdf
+    Info (12023): Found entity 1: decode_dla File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/decode_dla.tdf Line: 23
+Info (12128): Elaborating entity "decode_dla" for hierarchy "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|decode_dla:rden_decode" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 42
+Info (12021): Found 1 design units, including 1 entities, in source file db/mux_tfb.tdf
+    Info (12023): Found entity 1: mux_tfb File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/mux_tfb.tdf Line: 23
+Info (12128): Elaborating entity "mux_tfb" for hierarchy "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|mux_tfb:mux2" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 43
+Info (12128): Elaborating entity "memoria_saida" for hierarchy "memoria_saida:u_MEMORIA_SAIDA" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 188
+Info (12128): Elaborating entity "altsyncram" for hierarchy "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/memoria_saida.vhd Line: 62
+Info (12130): Elaborated megafunction instantiation "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/memoria_saida.vhd Line: 62
+Info (12133): Instantiated megafunction "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component" with the following parameter: File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/memoria_saida.vhd Line: 62
     Info (12134): Parameter "address_aclr_a" = "UNUSED"
     Info (12134): Parameter "address_aclr_b" = "NONE"
     Info (12134): Parameter "address_reg_b" = "CLOCK1"
@@ -1118,188 +1125,188 @@ Info (12133): Instantiated megafunction "memoria_saida:u_MEMORIA_SAIDA|altsyncra
     Info (12134): Parameter "wrcontrol_wraddress_reg_b" = "CLOCK1"
     Info (12134): Parameter "lpm_hint" = "ENABLE_RUNTIME_MOD=NO"
     Info (12134): Parameter "lpm_type" = "altsyncram"
-Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_6cp3.tdf
-    Info (12023): Found entity 1: altsyncram_6cp3 File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 34
-Info (12128): Elaborating entity "altsyncram_6cp3" for hierarchy "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated" File: c:/intelfpga_lite/16.1/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
-Info (12021): Found 1 design units, including 1 entities, in source file db/decode_aj9.tdf
-    Info (12023): Found entity 1: decode_aj9 File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/decode_aj9.tdf Line: 23
-Info (12128): Elaborating entity "decode_aj9" for hierarchy "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|decode_aj9:rden_decode" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 45
+Info (12021): Found 1 design units, including 1 entities, in source file db/altsyncram_0804.tdf
+    Info (12023): Found entity 1: altsyncram_0804 File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 34
+Info (12128): Elaborating entity "altsyncram_0804" for hierarchy "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated" File: d:/hd/programfiles/quartus_lite/quartus/libraries/megafunctions/altsyncram.tdf Line: 792
+Info (12021): Found 1 design units, including 1 entities, in source file db/decode_61a.tdf
+    Info (12023): Found entity 1: decode_61a File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/decode_61a.tdf Line: 23
+Info (12128): Elaborating entity "decode_61a" for hierarchy "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|decode_61a:rden_decode" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 45
 Warning (14284): Synthesized away the following node(s):
     Warning (14285): Synthesized away the following RAM node(s):
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a0" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 47
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a1" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 69
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a2" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 91
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a3" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 113
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a4" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 135
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a5" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 157
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a6" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 179
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a7" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 201
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a8" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 223
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a9" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 245
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a10" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 267
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a11" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 289
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a12" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 311
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a13" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 333
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a14" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 355
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a15" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 377
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a16" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 399
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a17" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 421
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a18" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 443
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a19" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 465
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a20" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 487
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a21" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 509
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a22" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 531
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a23" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 553
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a24" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 575
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a25" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 597
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a26" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 619
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a27" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 641
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a28" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 663
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a29" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 685
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a30" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 707
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a31" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 729
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a32" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 751
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a33" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 773
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a34" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 795
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a35" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 817
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a36" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 839
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a37" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 861
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a38" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 883
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a39" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 905
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a40" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 927
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a41" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 949
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a42" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 971
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a43" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 993
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a44" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 1015
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a45" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 1037
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a46" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 1059
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a47" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 1081
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a48" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 1103
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a49" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 1125
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a50" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 1147
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a51" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 1169
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a52" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 1191
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a53" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 1213
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a54" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 1235
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a55" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 1257
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a56" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 1279
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a57" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 1301
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a58" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 1323
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a59" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 1345
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a60" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 1367
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a61" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 1389
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a62" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 1411
-        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_6cp3:auto_generated|ram_block1a63" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_6cp3.tdf Line: 1433
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a0" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 45
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a1" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 68
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a2" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 91
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a3" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 114
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a4" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 137
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a5" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 160
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a6" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 183
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a7" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 206
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a8" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 229
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a9" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 252
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a10" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 275
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a11" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 298
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a12" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 321
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a13" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 344
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a14" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 367
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a15" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 390
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a16" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 413
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a17" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 436
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a18" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 459
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a19" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 482
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a20" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 505
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a21" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 528
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a22" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 551
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a23" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 574
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a24" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 597
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a25" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 620
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a26" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 643
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a27" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 666
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a28" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 689
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a29" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 712
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a30" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 735
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a31" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 758
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a32" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 781
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a33" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 804
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a34" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 827
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a35" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 850
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a36" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 873
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a37" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 896
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a38" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 919
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a39" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 942
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a40" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 965
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a41" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 988
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a42" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 1011
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a43" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 1034
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a44" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 1057
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a45" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 1080
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a46" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 1103
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a47" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 1126
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a48" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 1149
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a49" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 1172
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a50" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 1195
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a51" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 1218
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a52" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 1241
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a53" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 1264
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a54" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 1287
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a55" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 1310
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a56" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 1333
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a57" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 1356
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a58" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 1379
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a59" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 1402
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a60" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 1425
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a61" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 1448
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a62" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 1471
-        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_g6r3:auto_generated|ram_block1a63" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_g6r3.tdf Line: 1494
-        Warning (14320): Synthesized away node "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_3sr3:auto_generated|q_a[0]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_3sr3.tdf Line: 37
-        Warning (14320): Synthesized away node "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_3sr3:auto_generated|q_a[1]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_3sr3.tdf Line: 60
-        Warning (14320): Synthesized away node "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_3sr3:auto_generated|q_a[2]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_3sr3.tdf Line: 83
-        Warning (14320): Synthesized away node "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_3sr3:auto_generated|q_a[3]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_3sr3.tdf Line: 106
-        Warning (14320): Synthesized away node "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_3sr3:auto_generated|q_a[4]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_3sr3.tdf Line: 129
-        Warning (14320): Synthesized away node "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_3sr3:auto_generated|q_a[5]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_3sr3.tdf Line: 152
-        Warning (14320): Synthesized away node "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_3sr3:auto_generated|q_a[6]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_3sr3.tdf Line: 175
-        Warning (14320): Synthesized away node "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_3sr3:auto_generated|q_a[7]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_3sr3.tdf Line: 198
-        Warning (14320): Synthesized away node "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_jfr3:auto_generated|q_a[0]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_jfr3.tdf Line: 37
-        Warning (14320): Synthesized away node "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_jfr3:auto_generated|q_a[1]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_jfr3.tdf Line: 60
-        Warning (14320): Synthesized away node "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_jfr3:auto_generated|q_a[2]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_jfr3.tdf Line: 83
-        Warning (14320): Synthesized away node "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_jfr3:auto_generated|q_a[3]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_jfr3.tdf Line: 106
-        Warning (14320): Synthesized away node "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_jfr3:auto_generated|q_a[4]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_jfr3.tdf Line: 129
-        Warning (14320): Synthesized away node "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_jfr3:auto_generated|q_a[5]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_jfr3.tdf Line: 152
-        Warning (14320): Synthesized away node "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_jfr3:auto_generated|q_a[6]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_jfr3.tdf Line: 175
-        Warning (14320): Synthesized away node "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_jfr3:auto_generated|q_a[7]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/db/altsyncram_jfr3.tdf Line: 198
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a0" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 47
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a1" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 69
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a2" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 91
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a3" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 113
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a4" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 135
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a5" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 157
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a6" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 179
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a7" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 201
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a8" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 223
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a9" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 245
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a10" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 267
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a11" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 289
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a12" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 311
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a13" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 333
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a14" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 355
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a15" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 377
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a16" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 399
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a17" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 421
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a18" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 443
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a19" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 465
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a20" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 487
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a21" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 509
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a22" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 531
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a23" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 553
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a24" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 575
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a25" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 597
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a26" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 619
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a27" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 641
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a28" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 663
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a29" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 685
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a30" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 707
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a31" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 729
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a32" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 751
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a33" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 773
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a34" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 795
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a35" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 817
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a36" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 839
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a37" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 861
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a38" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 883
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a39" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 905
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a40" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 927
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a41" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 949
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a42" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 971
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a43" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 993
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a44" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 1015
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a45" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 1037
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a46" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 1059
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a47" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 1081
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a48" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 1103
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a49" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 1125
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a50" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 1147
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a51" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 1169
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a52" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 1191
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a53" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 1213
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a54" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 1235
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a55" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 1257
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a56" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 1279
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a57" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 1301
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a58" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 1323
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a59" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 1345
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a60" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 1367
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a61" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 1389
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a62" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 1411
+        Warning (14320): Synthesized away node "memoria_saida:u_MEMORIA_SAIDA|altsyncram:altsyncram_component|altsyncram_0804:auto_generated|ram_block1a63" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_0804.tdf Line: 1433
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a0" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 44
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a1" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 67
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a2" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 90
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a3" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 113
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a4" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 136
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a5" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 159
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a6" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 182
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a7" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 205
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a8" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 228
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a9" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 251
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a10" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 274
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a11" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 297
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a12" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 320
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a13" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 343
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a14" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 366
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a15" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 389
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a16" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 412
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a17" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 435
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a18" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 458
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a19" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 481
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a20" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 504
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a21" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 527
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a22" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 550
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a23" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 573
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a24" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 596
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a25" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 619
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a26" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 642
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a27" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 665
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a28" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 688
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a29" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 711
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a30" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 734
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a31" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 757
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a32" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 780
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a33" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 803
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a34" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 826
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a35" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 849
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a36" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 872
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a37" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 895
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a38" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 918
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a39" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 941
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a40" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 964
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a41" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 987
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a42" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 1010
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a43" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 1033
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a44" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 1056
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a45" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 1079
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a46" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 1102
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a47" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 1125
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a48" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 1148
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a49" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 1171
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a50" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 1194
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a51" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 1217
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a52" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 1240
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a53" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 1263
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a54" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 1286
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a55" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 1309
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a56" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 1332
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a57" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 1355
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a58" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 1378
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a59" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 1401
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a60" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 1424
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a61" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 1447
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a62" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 1470
+        Warning (14320): Synthesized away node "memoria_entrada:u_MEMORIA_ENTRADA|altsyncram:altsyncram_component|altsyncram_a224:auto_generated|ram_block1a63" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_a224.tdf Line: 1493
+        Warning (14320): Synthesized away node "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_tn24:auto_generated|q_a[0]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_tn24.tdf Line: 36
+        Warning (14320): Synthesized away node "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_tn24:auto_generated|q_a[1]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_tn24.tdf Line: 59
+        Warning (14320): Synthesized away node "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_tn24:auto_generated|q_a[2]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_tn24.tdf Line: 82
+        Warning (14320): Synthesized away node "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_tn24:auto_generated|q_a[3]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_tn24.tdf Line: 105
+        Warning (14320): Synthesized away node "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_tn24:auto_generated|q_a[4]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_tn24.tdf Line: 128
+        Warning (14320): Synthesized away node "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_tn24:auto_generated|q_a[5]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_tn24.tdf Line: 151
+        Warning (14320): Synthesized away node "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_tn24:auto_generated|q_a[6]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_tn24.tdf Line: 174
+        Warning (14320): Synthesized away node "sal_e_pimenta:u_MEMORIA_SAL_E_PIMENTA|altsyncram:altsyncram_component|altsyncram_tn24:auto_generated|q_a[7]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_tn24.tdf Line: 197
+        Warning (14320): Synthesized away node "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_db24:auto_generated|q_a[0]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_db24.tdf Line: 36
+        Warning (14320): Synthesized away node "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_db24:auto_generated|q_a[1]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_db24.tdf Line: 59
+        Warning (14320): Synthesized away node "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_db24:auto_generated|q_a[2]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_db24.tdf Line: 82
+        Warning (14320): Synthesized away node "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_db24:auto_generated|q_a[3]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_db24.tdf Line: 105
+        Warning (14320): Synthesized away node "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_db24:auto_generated|q_a[4]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_db24.tdf Line: 128
+        Warning (14320): Synthesized away node "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_db24:auto_generated|q_a[5]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_db24.tdf Line: 151
+        Warning (14320): Synthesized away node "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_db24:auto_generated|q_a[6]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_db24.tdf Line: 174
+        Warning (14320): Synthesized away node "memoria_gauss:u_MEMORIA_GAUSS|altsyncram:altsyncram_component|altsyncram_db24:auto_generated|q_a[7]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/db/altsyncram_db24.tdf Line: 197
 Info (286030): Timing-Driven Synthesis is running
-Info (17049): 25 registers lost all their fanouts during netlist optimizations.
+Info (17049): 30 registers lost all their fanouts during netlist optimizations.
 Info (16010): Generating hard_block partition "hard_block:auto_generated_inst"
     Info (16011): Adding 0 node(s), including 0 DDIO, 0 PLL, 0 transceiver and 0 LCELL
 Warning (21074): Design contains 17 input pin(s) that do not drive logic
-    Warning (15610): No output dependent on input pin "i_LIMIAR1[0]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 19
-    Warning (15610): No output dependent on input pin "i_LIMIAR1[1]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 19
-    Warning (15610): No output dependent on input pin "i_LIMIAR1[2]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 19
-    Warning (15610): No output dependent on input pin "i_LIMIAR1[3]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 19
-    Warning (15610): No output dependent on input pin "i_LIMIAR1[4]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 19
-    Warning (15610): No output dependent on input pin "i_LIMIAR1[5]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 19
-    Warning (15610): No output dependent on input pin "i_LIMIAR1[6]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 19
-    Warning (15610): No output dependent on input pin "i_LIMIAR1[7]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 19
-    Warning (15610): No output dependent on input pin "i_LIMIAR2[0]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 20
-    Warning (15610): No output dependent on input pin "i_LIMIAR2[1]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 20
-    Warning (15610): No output dependent on input pin "i_LIMIAR2[2]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 20
-    Warning (15610): No output dependent on input pin "i_LIMIAR2[3]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 20
-    Warning (15610): No output dependent on input pin "i_LIMIAR2[4]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 20
-    Warning (15610): No output dependent on input pin "i_LIMIAR2[5]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 20
-    Warning (15610): No output dependent on input pin "i_LIMIAR2[6]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 20
-    Warning (15610): No output dependent on input pin "i_LIMIAR2[7]" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 20
-    Warning (15610): No output dependent on input pin "i_SELECAO_RUIDO" File: C:/Users/User/Desktop/univali/TEE/ruido/RuidoRTL/top_entity.vhdl Line: 21
+    Warning (15610): No output dependent on input pin "i_LIMIAR1[0]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 19
+    Warning (15610): No output dependent on input pin "i_LIMIAR1[1]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 19
+    Warning (15610): No output dependent on input pin "i_LIMIAR1[2]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 19
+    Warning (15610): No output dependent on input pin "i_LIMIAR1[3]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 19
+    Warning (15610): No output dependent on input pin "i_LIMIAR1[4]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 19
+    Warning (15610): No output dependent on input pin "i_LIMIAR1[5]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 19
+    Warning (15610): No output dependent on input pin "i_LIMIAR1[6]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 19
+    Warning (15610): No output dependent on input pin "i_LIMIAR1[7]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 19
+    Warning (15610): No output dependent on input pin "i_LIMIAR2[0]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 20
+    Warning (15610): No output dependent on input pin "i_LIMIAR2[1]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 20
+    Warning (15610): No output dependent on input pin "i_LIMIAR2[2]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 20
+    Warning (15610): No output dependent on input pin "i_LIMIAR2[3]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 20
+    Warning (15610): No output dependent on input pin "i_LIMIAR2[4]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 20
+    Warning (15610): No output dependent on input pin "i_LIMIAR2[5]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 20
+    Warning (15610): No output dependent on input pin "i_LIMIAR2[6]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 20
+    Warning (15610): No output dependent on input pin "i_LIMIAR2[7]" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 20
+    Warning (15610): No output dependent on input pin "i_SELECAO_RUIDO" File: D:/HD/Documentos/FACULDADE-MATERIAS/topicos_especiais_em_engenharia_de_computacao/RuidoRTL/top_entity.vhdl Line: 21
 Info (21057): Implemented 56 device resources after synthesis - the final resource count might be different
     Info (21058): Implemented 21 input pins
     Info (21059): Implemented 1 output pins
     Info (21061): Implemented 34 logic cells
-Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 167 warnings
-    Info: Peak virtual memory: 4803 megabytes
-    Info: Processing ended: Thu Jun 17 09:16:33 2021
-    Info: Elapsed time: 00:00:20
-    Info: Total CPU time (on all processors): 00:00:45
+Info: Quartus Prime Analysis & Synthesis was successful. 0 errors, 166 warnings
+    Info: Peak virtual memory: 4891 megabytes
+    Info: Processing ended: Wed Jun 30 14:08:50 2021
+    Info: Elapsed time: 00:00:15
+    Info: Total CPU time (on all processors): 00:00:21
 
 

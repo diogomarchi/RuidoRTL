@@ -144,6 +144,22 @@ ARCHITECTURE rtl OF bloco_operacional IS
     q		      : OUT STD_LOGIC_VECTOR (7 DOWNTO 0)
   );
   END component;
+  
+  component comparadorEnderecoRuidos IS
+  PORT (
+    i_A : IN  STD_LOGIC_VECTOR(7 DOWNTO 0); -- data input 1	 
+    o_Q : OUT STD_LOGIC                 -- data output
+  );
+  END component;
+  
+  component contadorEnderecoRuidos IS
+  PORT (
+    i_CLR  : IN  STD_LOGIC;                    -- clear/reset
+    i_CLK  : IN  STD_LOGIC;                    -- clock
+    i_ENA  : IN  STD_LOGIC;                    -- enable 		 
+    o_CONT : OUT STD_LOGIC_VECTOR(7 DOWNTO 0)  -- data output
+  );
+  END component;
 
   
 signal w_o_CNT_ADDR : STD_LOGIC_VECTOR (19 DOWNTO 0); -- vinte bits 
@@ -151,7 +167,8 @@ signal w_o_ADDER : STD_LOGIC_VECTOR (8 DOWNTO 0); -- 9 bits
 signal w_o_MUX1, w_o_MUX2, w_o_MUX3, w_o_MUX4, w_o_MUX5, w_o_MUX6, w_o_MUX7 : STD_LOGIC_VECTOR (7 DOWNTO 0); -- 8 bits
 signal w_o_REG1, w_o_REG2 : STD_LOGIC_VECTOR (7 DOWNTO 0); -- 8 bits
 signal w_o_ABS : STD_LOGIC_VECTOR (7 DOWNTO 0); -- 8 bits
-signal w_o_COMP2, w_o_COMP3, w_o_COMP4 : STD_LOGIC;
+signal w_o_COMP2, w_o_COMP3, w_o_COMP4, w_o_COMP_RUIDO : STD_LOGIC;
+signal w_o_CONT_RUIDO : STD_LOGIC_VECTOR (7 DOWNTO 0); -- 8 bits
   
   
 
@@ -165,10 +182,22 @@ BEGIN
     o_CONT => w_o_CNT_ADDR 
   );
   
+  u_CNT_ADDR_NOIS: contadorEnderecoRuidos PORT MAP (
+    i_CLR  => w_o_COMP_RUIDO,
+    i_CLK  => i_CLK,
+    i_ENA  => i_INC_ADDR,
+    o_CONT => w_o_CONT_RUIDO
+  );
+  
   u_COMP1: comparador20Bit PORT MAP ( -- A < B
     i_A => w_o_CNT_ADDR, 
 	 i_B => "10111011101110111011",	 -- MAX_ADDRESS
     o_Q => o_NEXT   
+  );
+  
+  u_COMP_ADDR_RUIDO: comparadorEnderecoRuidos PORT MAP (
+    i_A => w_o_CONT_RUIDO,
+    o_Q => w_o_COMP_RUIDO
   );
   -----------------------------------------------
   
@@ -284,9 +313,8 @@ BEGIN
   o_WRITE_ENABLE <= i_WRITE_ENABLE;
 	
   o_ADDR       <= w_o_CNT_ADDR;
-  o_ADDR_GAUSS <= w_o_CNT_ADDR(7 downto 0);
-  o_ADDR_SAL   <= w_o_CNT_ADDR(7 downto 0);
+  o_ADDR_GAUSS <= w_o_CONT_RUIDO;
+  o_ADDR_SAL   <= w_o_CONT_RUIDO;
   o_PIXEL      <= w_o_MUX7;
     
-
 END rtl;
