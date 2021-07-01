@@ -231,8 +231,8 @@ BEGIN
   
   u_MUX2: multiplexador PORT MAP (
     i_SEL => w_o_COMP2,             -- (abs < pixel)
-    i_A   => w_o_ADDER(7 downto 0), -- output from somador
-    i_B   => "00000000", 				-- output clip
+    i_A   => "00000000",            -- output from somador
+    i_B   => w_o_ADDER(7 downto 0), -- output clip
     o_Q   => w_o_MUX2
   );  
   
@@ -279,8 +279,8 @@ BEGIN
  
   u_MUX6: multiplexador PORT MAP (
     i_SEL => w_o_COMP4,     -- (SAL > LIMIAR2)
-    i_A   => w_o_MUX5,      -- PIXEL
-    i_B   => w_o_MUX4, 		 -- CLIP
+    i_A   => w_o_MUX4,      -- PIXEL
+    i_B   => w_o_MUX5, 		 -- CLIP
     o_Q   => w_o_MUX6
   );
   -----------------------------------------------

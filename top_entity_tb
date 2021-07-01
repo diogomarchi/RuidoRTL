@@ -62,8 +62,8 @@ begin
     w_CLR_n         <= '1';
 
     -- limiar salt and pepper
-    w_LIMIAR1       <= "00010011"; -- int -> 0.2
-    w_LIMIAR2       <= "11101100"; -- int -> 0.8
+    w_LIMIAR1       <= "00001100"; -- int -> 0.05
+    w_LIMIAR2       <= "11110011"; -- int -> 0.95
 
     w_SELECAO_RUIDO <= '0';
     w_CONTINUE      <= '0';
